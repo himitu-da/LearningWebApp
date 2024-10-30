@@ -1,0 +1,44 @@
+body {
+    background-color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin: 30px auto;
+}
+
+h1 {
+    color: azure;
+    text-align: left;
+    width: 100%;
+}
+
+p, a, ul {
+    color: azure;
+    text-align: left;
+    width: 100%;
+    line-height: 1.8em;
+}
+
+iframe {
+    width: 100%;
+}
+
+.button {
+    padding: 10px;
+    margin: 10px auto;
+    color: black;
+    background-color: white;
+    width: 150px;
+    text-align: center;
+    transition-duration: 0.2s;
+}
+
+.button:hover {
+    padding: 20px;
+    margin: 0px auto;
+}
+
+.button:active {
+    padding: 30px;
+}
