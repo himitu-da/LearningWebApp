@@ -1,0 +1,18 @@
+#word-display {
+    font-size: 3em;
+    color: #ffffff;
+    text-align: center;
+    width: auto;
+    margin: 20px 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+#word-input {
+    text-align: center;
+    width: 60%;
+    font-size: 2em;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 50px;
+    display: block;
+}

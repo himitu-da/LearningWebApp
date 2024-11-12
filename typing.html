@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="typing-style.css">
+</head>
+<body>
+    <div class="block-container">
+        <h1>Typing Game</h1>
+        <p>Type the words that appear below:</p>
+        <div id="word-display"></div>
+        <input type="text" id="word-input" autocomplete="off">
+        <p>Score: <span id="score">0</span></p>
+        <p>Time: <span id="time">60</span>s</p>
+        <a class="button" href="index.html">Back to Home</a>
+    </div>
+    <script>
+        const words = ['hello', 'world', 'typing', 'game', 'javascript', 'programming'];
+        let score = 0;
+        let time = 60;
+        let currentWord = '';
+
+        function getRandomWord() {
+            return words[Math.floor(Math.random() * words.length)];
+        }
+
+        function updateGame() {
+            document.getElementById('word-display').textContent = currentWord;
+            document.getElementById('score').textContent = score;
+            document.getElementById('time').textContent = time;
+        }
+
+        function startGame() {
+            currentWord = getRandomWord();
+            updateGame();
+            
+            const timer = setInterval(() => {
+                time--;
+                updateGame();
+                if (time <= 0) {
+                    clearInterval(timer);
+                    alert('Game Over! Your score: ' + score);
+                }
+            }, 1000);
+
+            document.getElementById('word-input').addEventListener('input', (e) => {
+                if (e.target.value === currentWord) {
+                    score++;
+                    e.target.value = '';
+                    currentWord = getRandomWord();
+                    updateGame();
+                }
+            });
+        }
+
+        window.onload = startGame;
+    </script>
+</body>
+</html>
