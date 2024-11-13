@@ -4,7 +4,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 720px;
-    margin: 50px auto;
+    margin: 30px auto;
     box-sizing: border-box;
 }
 
@@ -12,8 +12,10 @@ h1 {
     color: azure;
     text-align: left;
     width: 100%;
-    margin: 10px 0px 30px 0px;
-    padding: 0px;
+    box-sizing: border-box;
+    border-bottom: 5px solid azure;
+    margin: 0px 0px 30px 0px;
+    padding: 10px;
 }
 
 p, a, ul {
@@ -61,6 +63,7 @@ iframe {
     margin: 10px auto;
     padding: 20px;
     width: 100%;
+    border-radius: 30px;
     background-color: midnightblue;
     box-sizing: border-box;
     overflow: hidden;
